@@ -1,0 +1,259 @@
+// Q.1) Find the maximum of three numbers
+
+/*
+ num1 = 10
+ num2 = 5
+ num3 = 7
+
+*/
+ 
+ /*
+#include <stdio.h>
+int main()
+{
+    int num1, num2, num3;
+    //Input from the user
+    printf("Enter three number:");
+    scanf("%d%d%d",&num1,&num2,&num3);
+    //find and print the maximum number 
+    
+    if (num1 >= num2 && num1 >= num3)
+    {
+        //&& => 1 && 1 = 1
+        printf("The maximum number is: %d\n",num1);
+    }
+    else if (num2 >= num1 && num2 >= num3)
+    {
+        printf("The maximum number is:%d\n",num2);   
+    }
+    else
+    {
+        printf("The maximum number is:%d\n",num3);
+    }
+    
+    return 0;
+}
+
+*/
+
+// Q.2) Classify an angle into acute, right and obtuse or invalid.
+
+/*
+  acute = 0 to 90
+  right = 90
+  obtuse = 90 to 180 
+*/
+
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int angle;
+    //Input from the user 
+    printf("Enter the angle:");
+    scanf("%d",&angle);
+    
+    //classify and print the type of angle
+    if(angle > 0 && angle < 90)
+    {
+        printf("The angle is acute.\n");
+    }
+    else if(angle == 90)
+    {
+      printf("The angle is right.\n");  
+    }
+    else if(angle < 180 && angle > 90)
+    {
+        printf("The angle is obtuse.\n");
+    }
+    else if(angle <= 0 || angle >=180)
+    {
+        printf("Invalid angle.\n");
+    }
+    
+    return 0;
+}
+
+*/
+
+// Q.3) Determine if a number is even or odd
+
+/*
+#include <stdio.h>
+int main()
+{
+    int num;
+    //Input from User 
+    printf("Enter the numbers:\n");
+    scanf("%d",&num);
+    
+    if(num%2 == 0)
+    {
+        printf("Number is even.\n");
+    }
+    else
+    {
+        printf("Number is odd.\n");
+    }
+    
+    return 0;
+}
+
+*/
+
+// Q.4) Check whether a given year is a leap year or not.
+
+/*
+
+ In leap year total days are 366 
+ the feb. months has 29 days
+ occuring once every 4 years
+ 
+*/
+
+/*
+ year % 4 == 0
+ year % 100 == 0
+ year % 400 == 0 
+
+
+Year not divisible by 100, unless divisible by 400.
+the second part 'year % 100 ! = 0' ensure that years 
+divisible by 100 are not leap years unless they are also divisible by 400
+
+The exception for that fact that has a year divisible by 100 but not divisible 
+by 400 is not a leap year.
+
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int year;
+    //Input from the User
+    printf("Enter a year.\n");
+    scanf("%d",&year);
+    
+    
+    // check and print if the year is a leap year or not.
+    if((year % 4 == 0 && year % 100 !=0) || (year % 400 == 0))
+    {
+        printf("%d is a leap year.\n",year);
+    }
+    else
+    {
+        printf("%d is not a leap year.\n",year);
+    }
+    return 0;
+}
+
+*/
+
+/*
+
+ Q.5) Write a program that takes two integers from the users
+and determine whether the first number is divisible by second 
+number.
+
+*/
+
+
+/*
+#include <stdio.h>
+int main()
+{
+    int num1,num2;
+    //input from the user 
+    printf("Enter two integers:(num1 and num2)");
+    scanf("%d%d",&num1, &num2);
+// determine and print whether num1 is divisible by num2
+    if(num2 != 0)
+    {
+        if(num1 % num2 == 0)
+        {
+            printf("%d is divisible by %d.\n",num1,num2);
+        }
+        else
+        {
+            printf("%d is not divisible by %d\n",num1,num2);
+        }
+    }
+    else
+    {
+        printf("Cannot divide by zero.please enter a non-zero divisior.\n");
+    }
+
+    return 0;
+}
+
+*/
+
+// Switch Statement in C
+/*
+
+ #1) It is a decision making statement.
+ #2) It is often used when there are multiple possible values of an expression
+     and you want to perform different action based on these values.
+
+*/
+
+/*
+  Syntax: 
+          switch(expression)
+          {
+              case constant1:
+            // code to be executed if expression Equal constant1.              
+              break; // It will terminate/stop her.
+           
+              // Maximum cases
+              
+              default:
+            // code to be executed if none of the cases match.               
+          }
+
+*/
+
+/*
+
+ Explanation:
+  1) expression tytpe
+  2) Constant in cases
+  3) No fall through
+  4) Default case (optionl1)
+  5) Execution order (imp)
+
+*/
+
+// Example 1:
+
+/*
+#include <stdio.h>
+int main()
+{
+    char grade = 'B';
+    switch(grade)
+    {
+        case'A':
+        printf("Excellent.\n");
+        break;
+        
+        case'B':
+        printf("Good job.\n");
+        break;
+        
+        case'c':
+        printf("You passed.\n");
+        break;
+        
+        Default:
+        printf("Invalid Grade.\n");
+        
+    }
+    return 0;
+}
+
+*/
