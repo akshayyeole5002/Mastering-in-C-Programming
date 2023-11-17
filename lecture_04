@@ -1,0 +1,226 @@
+// Decision control statement:
+
+/* 1) if,
+   2) if-else,
+   3) nested if-else,
+   4) cascaded if-else
+   5) switch statement
+
+*/
+
+ // #1) if statement
+ 
+  /*
+  syntax:
+  
+  if (condition)
+  {
+     // code to be executed if the condition is true 
+  }
+
+*/
+
+/*
+Explanation:
+    It executes a block of code only if the specified condition is true.
+*/
+
+/*
+
+ #2) if-else statement
+ 
+    syntax: if(condition)
+    {
+      // code to be executed if the condition is true. 
+    }
+    else
+    {
+      //code to be executed if the condition is false.  
+    }
+*/
+
+//Example:
+/*
+#include <stdio.h>
+int main()
+{
+    //if statement 
+    //The number is positive.
+    int num = 10;
+    // cheack if num is greater than 0
+    if (num > 0)
+    {
+        printf("The number is positive.\n");
+    }
+    else
+    {
+        printf("The number is negative.");
+    }
+    return 0;
+}
+
+*/
+
+/*
+
+ #3) Nested if-else statement
+ 
+syntax:
+
+    if (condition1)
+    {
+        if (condition2)
+        {
+            //cod eto be executed if the both conditon are true
+        }
+        else
+        {
+            code to be executed if the if condition 1 is true and condition 2 is false
+        }
+    }
+    else
+    {
+      //code to be executed if codition 1 is false.  
+    }
+
+*/
+
+/*
+Explanation:
+ 1) It involves placing on if-else statement inside another if or else block.
+ 2) Tis is useful when multiple conditions need to be chacked.
+*/
+
+//Example:
+
+/*
+#include <stdio.h>
+int main()
+{
+    int num = 17;
+    //check if the num is positive, negative, zero.
+    if (num > 0)
+    {
+        printf("The number is Positive.\n");
+    }
+    else
+    {
+        if (num < 0)
+        {
+            printf("The number is Negative.\n");
+        }
+        else
+        {
+            printf("The number is Zero.\n");
+        }
+    }
+    return 0;
+}
+
+*/
+
+/*
+ #4) Cascaded if-statement
+  
+  syntax:
+  
+         if (condition1)
+         {
+             //code to be executed if condition1 is true.
+         }
+         else if (condition2)
+         {
+             //code to be executed if condition2 is true.
+         }
+         else
+         {
+           // code to be executed if all condition are false.  
+         }
+
+*/
+
+/*
+ Explanation:
+  It provides series of condition to check and the code associated with the first true condition.  
+*/
+
+//Example:int
+
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int score = 20;
+    //Determine the grade based on the score.
+    
+    // score >= 90 'A'
+     //score >= 80 'B'
+     //score >= 70 'C'
+     //score >= 60 'D'
+     //else 'F'
+    
+    
+    if (score >= 90)
+    {
+        printf("Grade: A\n");
+        
+    }
+    else if (score >= 80)
+    {
+        printf("Grade: B\n");
+        
+    }
+    else if (score >= 70)
+    {
+        printf("Grade: c\n");
+    }
+    else if ("score >= 60")
+    {
+        printf("Grade: D\n");  
+    }
+    else
+    {
+        printf("Grade: F\n");  
+    }
+    
+    
+    return 0;
+}
+*/
+
+
+// Example 5: 
+
+/*
+
+Q. Determine the categorybof the number i.e positive, negative and zero. 
+
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("Enter a number:");
+    scanf("%d",&a);
+    
+    if (a > 0)
+    
+        printf("The number is positive");
+     else if (a < 0)
+     {
+         printf("The number is negative");
+     }
+     else
+     {
+         printf("The number is zero");
+     }
+    return 0;
+}
+
+
+*/
