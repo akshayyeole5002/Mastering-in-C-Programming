@@ -1,0 +1,261 @@
+// Lopps, Array and Pointers
+
+/*
+
+ # Lopps:
+ 
+ loops are used for repetitive execution of a block of code.
+ #1) for loop
+ #2) while loop 
+ #3) do-while loop
+ 
+*/
+
+
+
+// #1) for Lopps
+
+/*
+
+for (initialization; condition; update){
+    // Code to be executed
+}
+
+*/
+
+// Example 1: Counting from 0 to 10.
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    for (int i = 0; i <= 10; i++){
+        printf("%d",i);
+    }
+    
+    return 0;
+}
+
+*/
+
+// Example 2: Printing even numbers between 0 to 20.
+
+/*
+
+#include <stdio.h>
+int main(){
+    for(int i = 0; i <= 20; i+=2){
+        printf("%d",i);
+    }
+    
+    return 0;
+}
+
+*/
+
+// Example 3: Countdown from 5 to 1
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    for (int i = 5; i >= 1; i--){
+        printf("%d",i);
+    }
+
+    return 0;
+}
+
+*/
+
+// Example 4: Multiplication table for 7.
+ 
+ /*
+ 
+ #include <stdio.h>
+ int main(){
+     
+     int number = 10;
+     
+     for (int i = 1; i <= 10; i++){
+         printf("%d X %d = %d\n",number,i,number*i); // 7 X 1 = 7
+     }
+     
+     
+     return 0;
+ }
+
+*/
+
+// Example 5: Sum of number from 1 to 100.
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    // 1+2+3+........+100 => 5050
+    int sum = 0;
+    
+    for (int i = 0; i <= 100; i++){
+     sum += i;  // sum = sum + i   
+    }
+     printf("sum: %d\n",sum);
+    return 0;
+}
+
+*/
+
+// Example 6: Multiplication of number from 1 to 5.
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    int result = 1;
+
+    for (int i = 1; i <= 5; i++) {
+        result *= i;
+    }
+
+    printf("Multiplication of numbers from 1 to 5: %d\n", result);
+
+    return 0;
+}
+
+*/
+
+// while loop
+ /*
+ 
+ syntax:
+ 
+ while (condition){
+     // Code to be executed
+ }
+ 
+ */
+
+//Example 1: Print numbers from 1 to 5
+
+/*
+
+#include <stdio.h>
+int main(){
+    int i = 1;
+    while (i <= 5){
+        printf("%d",i);
+        i++;
+    }
+    
+    return 0;
+}
+
+*/
+
+//Example 2: Sum of numbers from 1 to 10.
+ 
+ /*
+ 
+#include <stdio.h>
+int main(){
+    
+    int i = 1, sum = 0;
+    
+    while(i <= 10){
+        sum += i;
+        i++;
+    }
+    printf("sum: %d",sum);
+    
+    return 0;
+}
+
+*/
+ 
+ //Example 3: Countdown from to 5 to 1.
+ 
+ /*
+ 
+#include <stdio.h>
+
+int main() 
+{
+    int i = 5;
+    while (i >= 1)
+    {
+        printf("%d",i);
+        i--;
+    }
+    return 0;
+}
+
+*/
+
+// Example 4: Displaying power of 2
+
+// 2 4 8 16 32 64 128 256 
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    while(i <= 8){
+        printf("%d",1 << i);
+        // using bitwise left shift for powers of 2
+        i++;
+    }
+        return 0;
+}
+
+
+    // Bitwise left shift ('<<')
+    /*
+    
+      #1) It shifts the bits of a number to the left by a specified number of positions.
+      #2) In the context of calculating power of 2, the left shift is equivalent
+          to multiplying the number by 2 raised to the power of the specified shift count.
+          
+    */
+    
+    // Bitwise Right shift('>>')
+     /*
+     
+      #1) It works similarly but shifts the bits to the right.
+      #2) In the context of this it is equivalent to dividing the number by 2 
+          raised to the power of the specifieds shift count.
+     */
+*/
+
+// Example 5:
+/*
+Write a c program to calculate the factorial of 
+a given number using a 'while' loop.
+*/
+
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    int num, factorial = 1;
+    printf("Enter a number:");
+    scanf("%d", &num);
+    
+    //calculate factorial using a while loop
+    while(num > 0){
+        factorial *= num;
+        num--;
+    }
+    printf("factorial:%d",factorial);
+    
+    return 0;
+}
+
+*/
