@@ -1,0 +1,230 @@
+// do-while loop 
+
+/*
+
+syntax:
+
+do{
+    // Code to be executed.
+  }while(condition); 
+ 
+ 
+ // 1) do-while loops ensure that the code block is executed at least once.
+ // 2) do-while is useful when you want to ensure that the loop body
+     executes at least once, as a condition is checked after the loop execution. 
+ 
+*/
+
+// Example 1:
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int i = 1;
+    
+    do{
+        printf("%d",i);
+        i++;
+    }while(i <= 10);
+    
+    return 0;
+}
+
+*/
+
+// Example 2: Sum of numbers
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int sum = 0;
+    int num;
+    
+    do{
+        printf("Enter a number(0 to stop):");
+        scanf("%d", &num);
+        sum += num;
+    }while(num != 0);
+    printf("Sum of entered numbers: %d\n",sum);
+    
+    return 0;
+}
+
+*/
+
+// Example 3: Factorial Calculation
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    int num, factorial = 1;
+    printf("Enter a number:");
+    scanf("%d", &num);
+    
+    if(num < 0){
+        printf("Factorial is undefined for negative numbers.\n");
+    }else {
+        do{
+            factorial *= num;   //factorial = factorial * num.
+            num--;  // 5! = 5 * 4 * 3 * 2 * 1  => 120        }
+        }while(num > 0);
+        
+        printf("factorial:%d\n",factorial);
+    }
+    
+    
+    return 0;
+}
+
+*/
+
+// break and continue statement
+
+/*
+
+for (initialization; condition; update;){
+    // code
+    if(some_condition){
+        break;
+    }
+}
+
+
+// break;
+
+
+   // Terminates the loop when a certain condition is met or the condition is true.
+
+// continue;
+
+
+   for (initialization; condition; update;){
+    // code
+    if(some_condition){
+        continue;
+    }
+}
+
+   // Skips the rest of the loop body and continue with the next
+
+*/
+
+// Example 1: 
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    for (int i = 1; i <= 10; i++){
+        if(i == 6){
+            break;
+        }
+        printf("%d",i);
+    }
+    return 0;
+}
+
+// output:
+// 1 2 3 4 5
+
+*/
+
+// Example 2:
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    for (int i = 1; i <= 10; i++){
+        if(i == 6){
+          continue;
+        }
+        printf("%d",i);
+    }
+    return 0;
+}
+
+// output:
+// 1 2 3 4 5 7 8 9 10
+
+*/
+
+
+// Nested loops
+
+/*
+
+Involves placing one loop inside another 
+
+*/
+
+// Example 1: Print a square patterns
+
+/*
+
+     ****
+     ****
+     ****
+     ****
+
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int side = 4;
+    
+    for (int i = 1; i <= side; i++){  // The number of rows
+        for(int j = 1; j <= side; j++){  // The number of * per row
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    
+    return 0;
+}
+
+*/
+
+// Example 2: Print a Right Triangle Pattern
+
+/*
+
+*
+**
+***
+****
+*****
+
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int height = 5;
+    
+    for (int i = 1; i <= height; i++){
+        for(int j = 1; j <= i; j++){
+            
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+*/
