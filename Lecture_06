@@ -1,0 +1,279 @@
+// switch statement 
+
+// Q.1) Write a c program to implement a simple calculator using a switch statement.
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    // operator => + - / *
+    // num1, num2.
+    char operator;
+    double num1, num2, result;
+    //Input operator and two numbers.
+    printf("Enter an operator(+ - * /): ");
+    scanf("%c", &operator);
+    printf("Enter two numbers:"  );
+    scanf("%lf %lf", &num1 , &num2);
+    
+    //Perform calculation based  on the operator.
+    switch(operator)
+    {
+      case '+':
+      result = num1+num2;
+      break;
+      
+      case '-':
+      result = num1 - num2;
+      break;
+      
+      case '*':
+      result = num1 * num2;
+      break;
+      
+      case '/':
+         if(num2 != 0)  //check for division by zero.
+          {
+            result = num1 / num2;
+          }
+         else
+          {  
+            printf("Error:Division by zero is undefined.\n");
+            return 1; //Exist with an error code.
+          }
+          break;
+        default:
+          printf("Error: Invaid operator.\n");
+          return 1;  //Exist with an error code.
+    }
+    
+    // output the result.
+    printf("Result: %2lf.\n",result);
+    
+    return 0;
+}
+
+*/
+
+// Q.2) ASCII Examole.
+//    Write a C program to input a character and display its ASCII value.    
+
+
+/* 
+
+#include <stdio.h>
+int main()
+{
+    char ch;
+    //input a character
+    printf("Enter a character:");
+    scanf("%c", &ch);
+    
+    // Display ASCII value of the character.
+    printf("ASCII value of %c is %d\n", ch,ch);
+    
+    return 0;
+}
+
+*/
+
+// Q.3) Write a c programto determine if a character is a vowel, consonant orneither.
+
+// Vowel => a e i o u
+// consonants => other excluding vowel.
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    char ch;
+    //Input a character.
+    printf("Enter a character:");
+    scanf("%c", &ch );
+    
+    // check and output whether the character is a vowel, consonant or neither.
+    
+    if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    {
+        if(ch == 'a' || ch == 'e'|| ch == 'i'|| ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ) 
+        {
+            printf("%c is a vowel.\n",ch);
+        }
+        else
+        {
+            printf("%c is a consonant.\n",ch);
+        }
+    }
+    else
+    {
+       printf("Invalid Input: Not a letter"); 
+    }
+    
+    return 0;
+}
+
+*/
+
+// Q.4) Write a C program to determine the type of triangle based on its three sides.
+
+/*
+ Type of Triangles:
+ 1) Equilateral (side1 == side2) && (side2 == side3)
+ 2) Isoscales (side1 == side2 || side2 == side3 ||side1 == side3)
+ 3) Scalene
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int side1, side2, side3;
+    printf("Enter the sides 1 2 3 :");
+    scanf("%d%d%d",&side1, &side2, &side3);
+    if(side1 == side1 && side2 == side3)
+    {
+      printf("Equilateral triangle");
+    }
+    else if(side1 == side2 || side2 == side3 || side1 == side3)
+    {
+      printf("Isoscales triangle.");  
+    }
+    else
+    {
+        printf("scalene triangle.");
+    }
+    return 0;
+}
+
+*/
+
+//Precedence of operator
+
+/*
+
+ Q.1) Write a c program to evalute the expression:
+ a + b * (c - d) / e
+
+*/
+
+/*
+
+#include <stdio.h> 
+int main()
+{
+    int a,b,c,d,e,result;
+    
+    // Input values 
+    
+    printf("Enter values for a,b,c,d,e: ");
+    scanf("%d%d%d%d%d", &a, &b ,&c, &d, &e);
+    // Evalute the expression
+    
+    result = a + b * (c - d) / e;
+    
+    // Output the result
+    
+    printf("result: %d\n",result);
+    
+    return 0;
+}
+
+*/
+
+/*
+
+Q.2) Write a c program to declare two integer variables,assign values to them,
+and then swap their values using a third variable.
+
+*/
+
+/*
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2,temp;
+    
+    //Input values
+    printf("Enter two integers:");
+    scanf("%d%d", &num1, &num2);
+    
+    // Swap values using a temporary variable
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+    
+    //Output swapped values
+    printf("Swapped values: %d %d\n",num1, num2);
+    
+    return 0;
+}
+
+*/
+
+// Homework:
+
+/*
+
+ Q.1) Write a C program that takes radius of as input,  calculate area of the circle.
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    float radius, area; // declare a variable
+
+    // Input radius from the user
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // calculate area of circle
+    area = 3.14 * radius * radius;
+
+    // Display the result
+    printf("Area of the circle with radius %.2f is: %.2f\n", radius, area);
+
+    return 0;
+}
+
+*/
+
+
+/*
+
+Q.2) Write a C program to calculate average of two integer and display result 
+     with two decimal places.
+
+*/
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    float average;
+
+    // Input two integers
+    printf("Enter first integer: ");
+    scanf("%d", &num1);
+
+    printf("Enter second integer: ");
+    scanf("%d", &num2);
+
+    // Calculate the average
+    average = (float)(num1 + num2) / 2;
+
+    // Display the result with two decimal places
+    printf("Average: %.2f\n", average);
+
+    return 0;
+}
+
+
+*/
