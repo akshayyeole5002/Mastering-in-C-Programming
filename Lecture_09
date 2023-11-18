@@ -1,0 +1,279 @@
+// Questions on nested loops
+
+/*
+
+Q.1) Print the following pattern using nested loops.
+ 1
+ 12
+ 123
+ 1234
+ 12345
+
+*/
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    int rows = 5;
+    
+    for (int i = 1; i <= rows; i++){
+         for(int j = 1; j <= i; j++){
+             printf("%d", j);
+         }
+         printf("\n");
+    }
+        
+    return 0;
+}
+
+*/
+
+/*
+
+// Q.2) Print the following pattern using nested loop.
+
+A
+BB
+CCC
+DDDD
+EEEEE
+
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int rows = 5;
+    
+    for (int i =1; i <= rows; i++){
+       for(int j = 1; j <= i; j++)
+       {
+           printf("%c",'A'+ i -1);
+       }
+       printf("\n");
+    }
+    return 0;
+}
+
+*/
+
+/*
+
+// Q.2) Print the following pattern using nested loop.
+
+           *  
+          ***
+         *****
+        *******
+       *********
+       
+       // 2 * i - 1
+*/
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    // Set the height of the pyramid
+    int n = 5;
+
+    // Outer loop for the number of rows
+    for (int i = 0; i < n; i++) {
+        // Inner loop for leading spaces
+        for (int j = 0; j < n - i - 1; j++) {
+            printf(" ");
+        }
+        
+        // Inner loop for printing *
+        for (int k = 0; k < 2 * i + 1; k++) {
+            printf("*");
+        }
+
+        // Move to the next line after completing a row
+        printf("\n");
+    }
+
+    return 0;
+}
+
+*/
+
+
+
+// Q.4) Print the following pattern using nested loop.
+
+
+
+// 12345
+ // 1234
+  // 123
+   // 12
+    // 1
+    
+    // rows -i + 1
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int rows = 5;
+    for(int i = 1; i <= rows; i++){
+        for(int j = 1; j < i; j++){
+           printf(" "); 
+        }
+        for (int k =1; k <= rows - i + 1; k++){
+         printf("%d",k);
+        }
+         printf("\n");    
+    }   
+    return 0;
+}
+
+*/
+
+/*
+
+// Q.5) Print the following pattern using nested loop.
+
+       1
+      121
+     12321
+    1234321
+   123454321
+   
+*/
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int rows = 5;
+     
+    for( int i = 1; i <= rows;i++ ){
+        // Print spaces
+        for(int j = 1; j <= rows - i; j++){
+          printf(" ");      
+        }
+        // Print increase number 
+        for (int k = 1; k <= i; k++){
+            printf("%d", k);
+        }
+        // Print decreasing number
+        for (int l = i - 1; l >= 1; l--){
+            printf("%d",l);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+*/
+
+
+
+// do while loop
+
+
+// Example 1: User input validation
+
+/*
+
+#include <stdio.h>
+int main() {
+    int userInput;
+    
+    do{
+        printf("Enter a positive number:");
+        scanf("%d", &userInput);
+    
+        if(userInput <= 0){
+            printf("Invalid input. please enter a positive number.\n");
+        }
+        
+      } while (userInput <= 0);
+      
+      printf("You entered a positive number:%d\n",userInput);
+      
+    return 0;
+}
+
+*/
+
+
+ // Example 2: Menu Driven Program 
+
+
+/*
+
+#include <stdio.h>
+
+int main ()
+{
+  int choice;
+  do
+    {
+        
+      printf ("Menu:\n");
+      printf ("1. Print Hello\n");
+      printf ("2. Print GoodBye.\n");
+      printf ("3. Exit\n");
+      
+      printf("Enter your choice (1-3):");
+      scanf("%d", &choice);
+      
+      switch (choice){
+         case 1:
+            printf("Hello!\n");
+            break;
+         case 2:
+            printf("GoodBye\n");
+            break; 
+         case 3:
+            printf("Exiting the Program\n");
+            break; 
+         case 4:
+            printf("Invalid choice.Please enter a valid option.\n");
+        }    
+    }while(choice != 0);
+    
+  return 0;
+}
+
+*/
+
+
+// Example 3: Password validation
+
+/*
+
+#include <stdio.h>
+# include <string.h>
+
+
+int main(){
+    char Password[20];
+    const char correctPassword[] = "Akshay@123";
+    
+    do {
+        printf("Enter the password:");
+        scanf("%s", Password);
+        
+        if(strcmp(Password, correctPassword) != 0);{
+            printf("Incorrect password. Try again. \n");
+        }
+    }while(strcmp(Password, correctPassword) != 0);
+    
+     printf("Login Successful!.\n ");
+    
+    return 0;
+}
+
+*/
