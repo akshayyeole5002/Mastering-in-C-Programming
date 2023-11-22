@@ -1,3 +1,25 @@
+// Declaration and initialization
+
+/*
+
+#include <stdio.h>
+int main(){
+    
+    // Declaration and initialization
+    
+    int numbers[5] = {1,2,3,4,5};
+    
+   // Accessing and printing array elements
+    
+    printf("Array elements:");
+    for(int i = 0; i < 5; i++){
+        printf("%d",numbers[i]);
+    }
+
+    return 0;
+}
+
+*/
 // Example 1: Search for an element 
 
 
