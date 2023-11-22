@@ -1,0 +1,167 @@
+// String
+
+/*
+
+1) In C, a string is represented as an array of characters.
+
+2) IT is sequence of characters stored in contiguous memory locations,
+terminated by the null character (''\0').
+
+3)Strings in c are often manipulated using various library functions
+definrd in the <string.h> header.
+
+*/
+
+
+// 1) Declaration:-
+
+// char str1[20];
+
+// 2) Initialization:-
+
+// char str2[] = "Akshay";
+
+
+
+
+// Example 1: Greeting
+
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    // Declaration and Initialization
+    
+    char greeting[] = "Hello,";
+    char name[] = "Akshay";
+    
+    //concatenate
+    
+    strcat(greeting, name);
+    
+    // function is used to concatenate 'name' on the end of 'greeting'
+    
+    printf("Greeting: %s\n", greeting);
+    
+    int length = strlen(greeting);
+    
+    // strlen => function is used to cal.and Print the length of the resulting string
+    
+    printf("Length of greeting: %d\n",length);
+    return 0;
+}
+
+*/
+
+
+// Example 2: String input
+
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    
+    char userInput[20];
+    
+    // Get user input
+    printf("Enter the string: ");
+    scanf("%19s",userInput);
+    
+    // Print the entered String
+    printf("You entered: %s\n", userInput);
+    
+    return 0;
+}
+
+*/
+
+
+// Example 3: String Comparision
+
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    
+    char str1[] = "apple";
+    char str2[] = "mango";
+    
+    // Compare strings
+    
+    int result = strcmp(str1,str2);
+    // Lexicographical Comparision
+    
+    printf("Comparision Result: %d\n", result);
+    
+    return 0;
+}
+
+*/
+
+  // Case 1:str1 < str 2 (a < m) => negative 
+  // Case 2:str1 == str2 => 0
+  // Case 3:str1 > str2 (a > m) => positive
+
+
+// Example 4: Substring Extraction
+
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char fullString[] = "Extract this Substring";
+    char subString[10];
+    
+    // Extract subString
+    
+    strncpy(subString, fullString + 8, 9);
+    subString[9] = '\0'; // Null-terminate the Substring
+    
+    printf("Substring: %s\n", subString);
+    
+    return 0;
+}
+
+*/
+
+
+// Example 5: String copy
+
+
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    
+    char source[] = "Copy Me!";
+    
+    char destination[20];
+    
+    // Copy the content of source to destination
+    
+    strcpy(destination,source);
+    
+    // Print the copied string
+    printf("Copied String: %s\n",destination);
+    
+    
+    
+    return 0;
+}
+
+*/
