@@ -1,0 +1,151 @@
+
+
+
+
+
+// Example: Concatenate Two String 
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    
+    char str1[] = "Akshay";
+    char str2[] = "Yeole";
+    
+    // Concatenate str2 to str1
+    
+    strcat(str1,str2);
+    
+    printf(" ");
+    
+    
+    return 0;
+}
+
+*/
+
+// Example 2: Reverse a String
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+     int main(){
+         
+         char original[] = "Reverse";
+         
+         // Reverse the string
+        strrev(original);
+         
+         
+         // 'strrev' is a not a standard C library function
+         // The output may be unexpected or an error, depend on the system
+         
+         printf("Reversed String: %s\n",original);
+         
+         
+        return 0; 
+     }
+  
+*/
+
+
+// Example 3: Find Substring
+ 
+ 
+/* 
+
+#include <stdio.h>
+#include <string.h>
+
+   int main(){
+       
+       char sentence[] = "This is a simple example";
+       char target[] = "simple";
+       
+       
+       // Find the position of the target Substring
+       
+       char *result = strstr(sentence, target); // Char (char *)
+       
+       // In C the strstr function return a pointer to the first occurrence
+       // of the target Substring within the given string.
+
+       
+       if(result != NULL){
+           printf("Substring found at position: %ld\n",result - sentence);
+       }else{
+           printf("Substring not found\n");
+       }
+       
+       
+       return 0;
+   }
+
+*/
+
+
+// Example 4: Compare Ignore case
+
+
+// Yash == yash
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    
+    char str1[] = "Akshay";
+    char str2[] = "akshay";
+    
+    
+    
+    int result = strcasecmp(str1, str2);
+    
+    printf("Comparison Result: %d\n",result);
+    
+    return 0;
+}
+
+*/
+
+// Example 5: Tokenize a string
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    
+    char sentence[] = "Tokenize tis string";
+    char *token;
+    
+    token = strtok(sentence, " ");
+    
+    // Print tokens
+    
+    while(token != NULL){
+        printf("Token: %s\n", token);
+        token = strtok(NULL, " ");
+    }
+    
+  
+   // Tokenize
+   //this
+   //string
+    
+    
+    return 0;
+}
+
+*/
+  
+
