@@ -164,9 +164,39 @@ int main(){
 }
 
 */
-
-/*
 Dereference operator :
 When indirection operator (*) is used with the pointer variable, 
-then it is known as dereferencing a pointer
+then it is known as dereferencing a pointer.
 */
+
+// Example 5:
+
+/*
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Declare and initialize two integer variables
+    int a = 5, b = 10, temp;
+
+    // Print the original values of 'a' and 'b'
+    printf("Original values: a = %d, b = %d\n", a, b);
+
+    // Use a pointer to swap the values of 'a' and 'b'
+    int *ptrA = &a;
+    int *ptrB = &b;
+
+    temp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = temp;
+
+    // Print the values after swapping
+    printf("Values after swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+
+*/
+
